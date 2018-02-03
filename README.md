@@ -1,6 +1,6 @@
 # APT Simulator
 
-APT Simulator is a Windows Batch script that uses a set of tools and output files to make a system look as if it was compromised in an APT attack
+APT Simulator is a Windows Batch script that uses a set of tools and output files to make a system look as if it was compromised
 
 # Use Cases
 
@@ -10,9 +10,9 @@ APT Simulator is a Windows Batch script that uses a set of tools and output file
 
 # Why Batch?
 
-- Because it's simple: Everone can read, modify or extend it
+- Because it's simple: Everyone can read, modify or extend it
 - It runs on every Windows system without any prerequisites
-- It is closest to a real attacker working on command line
+- It is closest to a real attacker working on the command line
 
 # Detection 
 
