@@ -155,6 +155,9 @@ This repo contains tools and executables that can harm your system's integrity a
 The CALDERA automated adversary emulation system
 [https://github.com/mitre/caldera](https://github.com/mitre/caldera)
 
+Infection Monkey - An automated pentest tool
+[https://github.com/guardicore/monkey](https://github.com/guardicore/monkey)
+
 # Contact
 
 Follow and contact me on Twitter @cyb3rops
