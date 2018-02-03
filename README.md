@@ -17,7 +17,9 @@ APT Simulator is a Windows Batch script that uses a set of tools and output file
 
 # Focus
 
-The focus of this tool is adversary activity, not malware. 
+The focus of this tool is to simulate adversary activity, not malware. See the [Advanced Solutions](#Advanced_Solutions) section for advanced tools to simulate adversary and malware activity.
+
+![APT vs Malware](/screenshots/MalwareAPT.png)
 
 # Avoiding Early Detection
 
