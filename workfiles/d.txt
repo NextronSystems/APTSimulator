@@ -1,0 +1,227 @@
+ Volume in drive C has no label.
+ Volume Serial Number is 0407-3841
+
+ Directory of C:\MSOCache
+
+10.07.2013  13:55    <DIR>          All Users
+               0 File(s)              0 bytes
+
+ Directory of C:\MSOCache\All Users
+
+10.07.2013  13:55    <DIR>          .
+10.07.2013  13:55    <DIR>          ..
+10.07.2013  13:55    <DIR>          {90140000-0011-0000-0000-0000000FF1CE}-C
+10.07.2013  13:55    <DIR>          {90140000-0015-0407-0000-0000000FF1CE}-C
+10.07.2013  13:55    <DIR>          {90140000-0016-0407-0000-0000000FF1CE}-C
+10.07.2013  13:55    <DIR>          {90140000-0018-0407-0000-0000000FF1CE}-C
+10.07.2013  13:55    <DIR>          {90140000-0019-0407-0000-0000000FF1CE}-C
+10.07.2013  13:55    <DIR>          {90140000-001A-0407-0000-0000000FF1CE}-C
+10.07.2013  13:55    <DIR>          {90140000-001B-0407-0000-0000000FF1CE}-C
+10.07.2013  13:55    <DIR>          {90140000-002A-0407-1000-0000000FF1CE}-C
+10.07.2013  13:55    <DIR>          {90140000-002C-0407-0000-0000000FF1CE}-C
+10.07.2013  13:55    <DIR>          {90140000-0044-0407-0000-0000000FF1CE}-C
+10.07.2013  13:55    <DIR>          {90140000-006E-0407-0000-0000000FF1CE}-C
+10.07.2013  13:55    <DIR>          {90140000-00A1-0407-0000-0000000FF1CE}-C
+10.07.2013  13:55    <DIR>          {90140000-00BA-0407-0000-0000000FF1CE}-C
+               0 File(s)              0 bytes
+
+ Directory of C:\MSOCache\All Users\{90140000-0011-0000-0000-0000000FF1CE}-C
+
+10.07.2013  13:55    <DIR>          .
+10.07.2013  13:55    <DIR>          ..
+10.07.2013  13:55         3.025.408 Office64WW.msi
+10.07.2013  13:55             4.685 Office64WW.xml
+10.07.2013  13:55           149.352 ose.exe
+10.07.2013  13:55         5.789.544 osetup.dll
+10.07.2013  13:55        23.865.400 OWOW64WW.cab
+10.07.2013  13:55         1.248.016 PidGenX.dll
+10.07.2013  13:55           715.834 pkeyconfig-office.xrm-ms
+10.07.2013  13:55        24.809.472 ProPlusWW.msi
+10.07.2013  13:55            17.252 ProPlusWW.xml
+10.07.2013  13:55       149.278.843 ProPsWW.cab
+10.07.2013  13:55       197.934.115 ProPsWW2.cab
+10.07.2013  13:55         1.100.664 setup.exe
+10.07.2013  13:55            31.521 Setup.xml
+              13 File(s)    407.970.106 bytes
+
+ Directory of C:\MSOCache\All Users\{90140000-0015-0407-0000-0000000FF1CE}-C
+
+10.07.2013  13:55    <DIR>          .
+10.07.2013  13:55    <DIR>          ..
+10.07.2013  13:55         1.820.160 AccessMUI.msi
+10.07.2013  13:55             1.349 AccessMUI.xml
+10.07.2013  13:55        33.357.386 AccLR.cab
+10.07.2013  13:55           801.378 branding.xml
+10.07.2013  13:55             2.050 Setup.xml
+               5 File(s)     35.982.323 bytes
+
+ Directory of C:\MSOCache\All Users\{90140000-0016-0407-0000-0000000FF1CE}-C
+
+10.07.2013  13:55    <DIR>          .
+10.07.2013  13:55    <DIR>          ..
+10.07.2013  13:55        24.726.792 ExcelLR.cab
+10.07.2013  13:55         1.808.384 ExcelMUI.msi
+10.07.2013  13:55             1.565 ExcelMUI.xml
+10.07.2013  13:55             2.296 Setup.xml
+               4 File(s)     26.539.037 bytes
+
+ Directory of C:\MSOCache\All Users\{90140000-0018-0407-0000-0000000FF1CE}-C
+
+10.07.2013  13:55    <DIR>          .
+10.07.2013  13:55    <DIR>          ..
+10.07.2013  13:55         1.806.336 PowerPointMUI.msi
+10.07.2013  13:55             1.557 PowerPointMUI.xml
+10.07.2013  13:55        48.097.899 PptLR.cab
+10.07.2013  13:55             1.886 Setup.xml
+               4 File(s)     49.907.678 bytes
+
+ Directory of C:\MSOCache\All Users\{90140000-0019-0407-0000-0000000FF1CE}-C
+
+10.07.2013  13:55    <DIR>          .
+10.07.2013  13:55    <DIR>          ..
+10.07.2013  13:55         1.816.576 PublisherMUI.msi
+10.07.2013  13:55             1.451 PublisherMUI.xml
+10.07.2013  13:55        13.339.276 PubLR.cab
+10.07.2013  13:55             1.609 Setup.xml
+               4 File(s)     15.158.912 bytes
+
+ Directory of C:\MSOCache\All Users\{90140000-001A-0407-0000-0000000FF1CE}-C
+
+10.07.2013  13:55    <DIR>          .
+10.07.2013  13:55    <DIR>          ..
+10.07.2013  13:55        19.317.002 OutlkLR.cab
+10.07.2013  13:55         2.121.216 OutlookMUI.msi
+10.07.2013  13:55             3.187 OutlookMUI.xml
+10.07.2013  13:55             4.207 Setup.xml
+               4 File(s)     21.445.612 bytes
+
+ Directory of C:\MSOCache\All Users\{90140000-001B-0407-0000-0000000FF1CE}-C
+
+10.07.2013  13:55    <DIR>          .
+10.07.2013  13:55    <DIR>          ..
+10.07.2013  13:55             2.424 Setup.xml
+10.07.2013  13:55        49.537.348 WordLR.cab
+10.07.2013  13:55         1.825.280 WordMUI.msi
+10.07.2013  13:55             1.800 WordMUI.xml
+               4 File(s)     51.366.852 bytes
+
+ Directory of C:\MSOCache\All Users\{90140000-002A-0407-1000-0000000FF1CE}-C
+
+10.07.2013  13:55    <DIR>          .
+10.07.2013  13:55    <DIR>          ..
+10.07.2013  13:55           673.792 Office64MUI.msi
+10.07.2013  13:55             1.576 Office64MUI.xml
+10.07.2013  13:55         1.214.017 OWOW64LR.cab
+10.07.2013  13:55             2.151 Setup.xml
+               4 File(s)      1.891.536 bytes
+
+ Directory of C:\MSOCache\All Users\{90140000-002C-0407-0000-0000000FF1CE}-C
+
+10.07.2013  13:55    <DIR>          .
+10.07.2013  13:55    <DIR>          ..
+10.07.2013  13:55    <DIR>          Proof.de
+10.07.2013  13:55    <DIR>          Proof.en
+10.07.2013  13:55    <DIR>          Proof.fr
+10.07.2013  13:55    <DIR>          Proof.it
+10.07.2013  13:55           654.848 Proofing.msi
+10.07.2013  13:55               811 Proofing.xml
+10.07.2013  13:55             7.408 Setup.xml
+               3 File(s)        663.067 bytes
+
+ Directory of C:\MSOCache\All Users\{90140000-002C-0407-0000-0000000FF1CE}-C\Proof.de
+
+10.07.2013  13:55    <DIR>          .
+10.07.2013  13:55    <DIR>          ..
+10.07.2013  13:55        19.088.870 Proof.cab
+10.07.2013  13:55           663.040 Proof.msi
+10.07.2013  13:55             1.459 Proof.xml
+               3 File(s)     19.753.369 bytes
+
+ Directory of C:\MSOCache\All Users\{90140000-002C-0407-0000-0000000FF1CE}-C\Proof.en
+
+10.07.2013  13:55    <DIR>          .
+10.07.2013  13:55    <DIR>          ..
+10.07.2013  13:55        10.918.653 Proof.cab
+10.07.2013  13:55           656.896 Proof.msi
+10.07.2013  13:55             1.347 Proof.xml
+               3 File(s)     11.576.896 bytes
+
+ Directory of C:\MSOCache\All Users\{90140000-002C-0407-0000-0000000FF1CE}-C\Proof.fr
+
+10.07.2013  13:55    <DIR>          .
+10.07.2013  13:55    <DIR>          ..
+10.07.2013  13:55        20.451.562 Proof.cab
+10.07.2013  13:55           667.648 Proof.msi
+10.07.2013  13:55             1.458 Proof.xml
+               3 File(s)     21.120.668 bytes
+
+ Directory of C:\MSOCache\All Users\{90140000-002C-0407-0000-0000000FF1CE}-C\Proof.it
+
+10.07.2013  13:55    <DIR>          .
+10.07.2013  13:55    <DIR>          ..
+10.07.2013  13:55        14.555.121 Proof.cab
+10.07.2013  13:55           662.528 Proof.msi
+10.07.2013  13:55             1.461 Proof.xml
+               3 File(s)     15.219.110 bytes
+
+ Directory of C:\MSOCache\All Users\{90140000-0044-0407-0000-0000000FF1CE}-C
+
+10.07.2013  13:55    <DIR>          .
+10.07.2013  13:55    <DIR>          ..
+10.07.2013  13:55        22.086.749 InfLR.cab
+10.07.2013  13:55         2.449.408 InfoPathMUI.msi
+10.07.2013  13:55             1.231 InfoPathMUI.xml
+10.07.2013  13:55             1.852 Setup.xml
+               4 File(s)     24.539.240 bytes
+
+ Directory of C:\MSOCache\All Users\{90140000-006E-0407-0000-0000000FF1CE}-C
+
+10.07.2013  13:55    <DIR>          .
+10.07.2013  13:55    <DIR>          ..
+10.07.2013  13:55    <DIR>          1031
+10.07.2013  13:55           801.378 branding.xml
+10.07.2013  13:55           838.536 DW20.EXE
+10.07.2013  13:55           526.176 dwdcw20.dll
+10.07.2013  13:55           519.584 dwtrig20.exe
+10.07.2013  13:55             1.857 Microsoft.VC90.CRT.manifest
+10.07.2013  13:55           655.872 msvcr90.dll
+10.07.2013  13:55        14.884.469 OfficeLR.cab
+10.07.2013  13:55         3.067.392 OfficeMUI.msi
+10.07.2013  13:55             5.611 OfficeMUI.xml
+10.07.2013  13:55           222.080 osetupui.dll
+10.07.2013  13:55            27.746 pss10r.chm
+10.07.2013  13:55           103.977 setup.chm
+10.07.2013  13:55             9.330 Setup.xml
+10.07.2013  13:55            81.408 ShellUI.MST
+              14 File(s)     21.745.416 bytes
+
+ Directory of C:\MSOCache\All Users\{90140000-006E-0407-0000-0000000FF1CE}-C\1031
+
+10.07.2013  13:55    <DIR>          .
+10.07.2013  13:55    <DIR>          ..
+10.07.2013  13:55           112.536 dwintl20.dll
+               1 File(s)        112.536 bytes
+
+ Directory of C:\MSOCache\All Users\{90140000-00A1-0407-0000-0000000FF1CE}-C
+
+10.07.2013  13:55    <DIR>          .
+10.07.2013  13:55    <DIR>          ..
+10.07.2013  13:55         1.805.312 OneNoteMUI.msi
+10.07.2013  13:55             1.606 OneNoteMUI.xml
+10.07.2013  13:55        15.335.796 OnoteLR.cab
+10.07.2013  13:55             1.988 Setup.xml
+               4 File(s)     17.144.702 bytes
+
+ Directory of C:\MSOCache\All Users\{90140000-00BA-0407-0000-0000000FF1CE}-C
+
+10.07.2013  13:55    <DIR>          .
+10.07.2013  13:55    <DIR>          ..
+10.07.2013  13:55         6.056.159 GrooveLR.cab
+10.07.2013  13:55         1.809.408 GrooveMUI.msi
+10.07.2013  13:55               913 GrooveMUI.xml
+10.07.2013  13:55             1.452 Setup.xml
+               4 File(s)      7.867.932 bytes
+
+     Total Files Listed:
+              84 File(s)    750.004.992 bytes
+              57 Dir(s)  11.198.537.728 bytes free

