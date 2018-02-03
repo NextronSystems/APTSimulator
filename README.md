@@ -15,6 +15,14 @@ APT Simulator is a Windows Batch script that uses a set of tools and output file
 - It runs on every Windows system without any prerequisites
 - It is closest to a real attacker working on the command line
 
+# Focus
+
+The focus of this tool is adversary activity, not malware. 
+
+# Avoiding Early Detection
+
+The batch script extracts the tools and shells from an encrypted 7z archive at runtime. 
+
 # Detection 
 
 The following table shows the different test cases and the expected detection results.
