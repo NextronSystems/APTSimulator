@@ -7,6 +7,7 @@ APT Simulator is a Windows Batch script that uses a set of tools and output file
 1. POCs: Endpoint detection agents / compromise assessment tools
 2. Test your security monitoring's detection capabilities 
 3. Test your SOCs response on a threat that isn't EICAR or a port scan
+4. Prepare an environment for digital forensics classes
 
 # Why Batch?
 
@@ -157,6 +158,16 @@ The CALDERA automated adversary emulation system
 
 Infection Monkey - An automated pentest tool
 [https://github.com/guardicore/monkey](https://github.com/guardicore/monkey)
+
+# Integrated Projects / Software
+
+- [Mimikatz](https://github.com/gentilkiwi/mimikatz)
+- [PowerSploit](https://github.com/PowerShellMafia/PowerSploit)
+- [PowerCat](https://github.com/besimorhino/powercat)
+- [PsExec](https://docs.microsoft.com/en-us/sysinternals/downloads/psexec)
+- [ProcDump](https://docs.microsoft.com/en-us/sysinternals/downloads/procdump)
+- [7Zip](http://www.7-zip.org/download.html)
+- [curl](https://curl.haxx.se/)
 
 # Contact
 
