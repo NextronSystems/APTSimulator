@@ -9,6 +9,10 @@ APT Simulator is a Windows Batch script that uses a set of tools and output file
 3. Test your SOCs response on a threat that isn't EICAR or a port scan
 4. Prepare an environment for digital forensics classes
 
+# Motives
+
+Customers tested our scanners in a POC and sent us a complaint that our scanners didn't report on programs that they had installed on their test systems. They had installed an Nmap, dropped a PsExec.exe in the Downloads folder and placed on EICAR test virus on the user's Desktop. That was the moment when I decided to build a tool that simulates a real threat in a more appropriate way.  
+
 # Why Batch?
 
 - Because it's simple: Everyone can read, modify or extend it
@@ -168,6 +172,9 @@ The CALDERA automated adversary emulation system
 
 Infection Monkey - An automated pentest tool
 [https://github.com/guardicore/monkey](https://github.com/guardicore/monkey)
+
+Flightsim - A utility to generate malicious network traffic and evaluate controls 
+[https://github.com/alphasoc/flightsim](https://github.com/alphasoc/flightsim)
 
 # Integrated Projects / Software
 
