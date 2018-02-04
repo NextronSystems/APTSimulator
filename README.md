@@ -64,13 +64,6 @@ The following table shows the different test cases and the expected detection re
 | Scheduled Task Creation                    |           |            | X   | X                   | X                     |
 | Nbtscan Discovery                          |           | X          | X   | X                   | X                     |
 
-# Getting Started
-
-1. Download the latest release from the [release](https://github.com/Neo23x0/APTSimulator/releases) section
-2. Extract the package on a demo system (Password: apt)
-3. Start a cmd.exe as Administrator
-4. Navigate to the extracted program folder and run APTSimulator.bat
-
 # Actions
 
 ## 1. Dumps 
