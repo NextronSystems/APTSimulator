@@ -12,6 +12,9 @@ copy APTSimulator.bat %BUILD%
 :: HELPERS
 xcopy /S /Y .\helpers %BUILD%\helpers\
 
+:: TEST SETS
+xcopy /S /Y .\test-sets %BUILD%\test-sets\
+
 :: TOOLS
 :: Compress and encrypt toolset
 %ZIP% u -bb3 -t7z -r -mx=9 -mmt=4 -mhe=on -p%PASS% enc-toolset.7z ./toolset/
