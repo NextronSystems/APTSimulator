@@ -23,14 +23,7 @@ The focus of this tool is to simulate adversary activity, not malware. See the [
 
 # Avoiding Early Detection
 
-The batch script extracts the tools and shells from an encrypted 7z archive at runtime. 
-
-# Getting Started
-
-1. Download the latest release from the [release](https://github.com/Neo23x0/APTSimulator/releases) section
-2. Extract the package on a demo system (Password: apt)
-3. Start a cmd.exe as Administrator
-4. Navigate to the extracted program folder and run APTSimulator.bat
+The batch script extracts the tools and shells from an encrypted 7z archive at runtime. Do not download the master repo using the "download as ZIP" button. Instead use the official release from the [release](https://github.com/Neo23x0/APTSimulator/releases) section.
 
 # Detection 
 
@@ -58,6 +51,13 @@ The following table shows the different test cases and the expected detection re
 | C2 Requests                                | (X)       | X          | X   | X                   |                       |
 | Malicious User Agents                      |           | X          | X   | X                   |                       |
 | Scheduled Task Creation                    |           |            | X   | X                   | X                     |
+
+# Getting Started
+
+1. Download the latest release from the [release](https://github.com/Neo23x0/APTSimulator/releases) section
+2. Extract the package on a demo system (Password: apt)
+3. Start a cmd.exe as Administrator
+4. Navigate to the extracted program folder and run APTSimulator.bat
 
 # Actions
 
