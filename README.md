@@ -189,7 +189,7 @@ The following table shows the different test cases and the expected detection re
 
 # Warning
 
-This repo contains tools and executables that can harm your system's integrity and stabiliuty. Do only use them on non-productive test or demo systems.
+This repo contains tools and executables that can harm your system's integrity and stability. Do only use them on non-productive test or demo systems.
 
 # Screenshots
 
