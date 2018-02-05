@@ -68,29 +68,35 @@ If you script includes a tool, web shell, auxiliary or output file, place them i
 
 The following table shows the different test cases and the expected detection results.
 
-| Test Case                                  | Antivirus | NIDS / NSM | EDR | Security Monitoring | Compromise Assessment |
-|--------------------------------------------|-----------|------------|-----|---------------------|-----------------------|
-| Dumps                                      |           |            |     |                     | X                     |
-| Recon Activity                             |           |            | X   | X                   | X                     |
-| DNS                                        | (X)       | X          |     | X                   | X                     |
-| Eventlog                                   |           |            | X   | X                   | X                     |
-| Hosts File                                 | (X)       |            | X   |                     | X                     |
-| Backdoor - StickyKey                       |           |            | X   |                     | X                     |
-| Cloaking                                   |           |            |     |                     | (X)                   |
-| Web Shells                                 | X         |            | (X) |                     | X                     |
-| Ncat Alternative (Drop & Execution)        | X         |            | X   | X                   | X                     |
-| Remote Execution Tool                      | (X)       |            |     |                     | X                     |
-| Mimikatz (Drop & Execution)                | X         |            | X   | X                   | X                     |
-| PsExec (Drop & Execution)                  |           |            | X   | X                   | X                     |
-| At Job Creation                            |           |            | X   | X                   | X                     |
-| RUN Key Entry Creation                     |           |            | X   | X                   | X                     |
-| System File in Susp Loc (Drop & Execution) |           |            | X   | X                   | X                     |
-| Guest User (Activation & Admin)            |           |            | X   | X                   | X                     |
-| LSASS Process Dump                         |           |            | X   | X                   | X                     |
-| C2 Requests                                | (X)       | X          | X   | X                   |                       |
-| Malicious User Agents                      |           | X          | X   | X                   |                       |
-| Scheduled Task Creation                    |           |            | X   | X                   | X                     |
-| Nbtscan Discovery                          |           | X          | X   | X                   | X                     |
+- AV = Antivirus
+- NIDS = Network Intrusion Detection System
+- EDR = Endpoint Detection and Response
+- SM = Security Monitoring
+- CA = Compromise Assessment
+
+| Test Case                             | AV  | NIDS | EDR | SM  | CA  |
+|---------------------------------------|-----|------|-----|-----|-----|
+| Dumps                                 |     |      |     |     | X   |
+| Recon Activity                        |     |      | X   | X   | X   |
+| DNS                                   | (X) | X    |     | X   | X   |
+| Eventlog                              |     |      | X   | X   | X   |
+| Hosts File                            | (X) |      | X   |     | X   |
+| Backdoor - StickyKey                  |     |      | X   |     | X   |
+| Cloaking                              |     |      |     |     | (X) |
+| Web Shells                            | X   |      | (X) |     | X   |
+| Ncat Alternative (Drop & Exec)        | X   |      | X   | X   | X   |
+| Remote Execution Tool                 | (X) |      |     |     | X   |
+| Mimikatz (Drop & Exec)                | X   |      | X   | X   | X   |
+| PsExec (Drop & Exec)                  |     |      | X   | X   | X   |
+| At Job Creation                       |     |      | X   | X   | X   |
+| RUN Key Entry Creation                |     |      | X   | X   | X   |
+| System File in Susp Loc (Drop & Exec) |     |      | X   | X   | X   |
+| Guest User (Activation & Admin)       |     |      | X   | X   | X   |
+| LSASS Process Dump                    |     |      | X   | X   | X   |
+| C2 Requests                           | (X) | X    | X   | X   |     |
+| Malicious User Agents                 |     | X    | X   | X   |     |
+| Scheduled Task Creation               |     |      | X   | X   | X   |
+| Nbtscan Discovery (Scan & Output)     |     | X    | X   | (X) | X   |
 
 # Actions
 
