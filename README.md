@@ -36,6 +36,34 @@ The focus of this tool is to simulate adversary activity, not malware. See the [
 
 The batch script extracts the tools and shells from an encrypted 7z archive at runtime. Do not download the master repo using the "download as ZIP" button. Instead use the official release from the [release](https://github.com/Neo23x0/APTSimulator/releases) section.
 
+# Extending the Test Set
+
+Since version 0.4 it is pretty easy to extend the test sets by adding a single `.bat` file to one of the test-set category folders. 
+
+E.g. If you want to write a simple use case for "privilege escalation", that uses a tool named "privesc.exe", clone the repo and do the following:
+
+1. Add you tool to the `toolset` folder
+2. Write a new batch script `privesc-1.bat` and add it to the `./test-sets/privilege-escalation` folder
+3. Run `build_pack.bat`
+4. Add your test to the table and action list in the README.md
+5. Create a pull request
+
+## Tool and File Extraction
+
+If you script includes a tool, web shell, auxiliary or output file, place them in the folders `./toolset` or `./workfiles`. Running the build script `build_pack.bat` will include them in the encrypted archives `enc-toolset.7z` and `enc-files.7z`.
+
+### Extract a Tool 
+
+```
+%ZIP% e -p%PASS% %TOOLARCH% -aoa -o%APTDIR% toolset\tool.exe > NUL
+```
+
+### Extract a File
+
+```
+%ZIP% e -p%PASS% %FILEARCH% -aoa -o%APTDIR% workfile\tool-output.txt > NUL
+```
+
 # Detection 
 
 The following table shows the different test cases and the expected detection results.
