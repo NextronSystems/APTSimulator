@@ -76,25 +76,25 @@ The following table shows the different test cases and the expected detection re
 
 | Test Case                             | AV  | NIDS | EDR | SM  | CA  |
 |---------------------------------------|-----|------|-----|-----|-----|
-| Dumps                                 |     |      |     |     | X   |
-| Recon Activity                        |     |      | X   | X   | X   |
-| DNS                                   | (X) | X    |     | X   | X   |
-| Eventlog                              |     |      | X   | X   | X   |
-| Hosts File                            | (X) |      | X   |     | X   |
+| Dumps (Pwdump, Dir Listing)           |     |      |     |     | X   |
+| Recon Activity (Typical Commands)     |     |      | X   | X   | X   |
+| DNS (Cache Injection)                 | (X) | X    |     | X   | X   |
+| Eventlog (WCE entries)                |     |      | X   | X   | X   |
+| Hosts File (AV/Win Update blocks)     | (X) |      | X   |     | X   |
 | Backdoor - StickyKey                  |     |      | X   |     | X   |
-| Cloaking                              |     |      |     |     | (X) |
-| Web Shells                            | X   |      | (X) |     | X   |
+| Obfuscation (RAR with JPG ext)        |     |      |     |     | (X) |
+| Web Shells (a good selection)         | X   |      | (X) |     | X   |
 | Ncat Alternative (Drop & Exec)        | X   |      | X   | X   | X   |
-| Remote Execution Tool                 | (X) |      |     |     | X   |
+| Remote Execution Tool (Drop)          | (X) |      |     |     | X   |
 | Mimikatz (Drop & Exec)                | X   |      | X   | X   | X   |
 | PsExec (Drop & Exec)                  |     |      | X   | X   | X   |
 | At Job Creation                       |     |      | X   | X   | X   |
 | RUN Key Entry Creation                |     |      | X   | X   | X   |
 | System File in Susp Loc (Drop & Exec) |     |      | X   | X   | X   |
 | Guest User (Activation & Admin)       |     |      | X   | X   | X   |
-| LSASS Process Dump                    |     |      | X   | X   | X   |
+| LSASS Dump (with Procdump)            |     |      | X   | X   | X   |
 | C2 Requests                           | (X) | X    | X   | X   |     |
-| Malicious User Agents                 |     | X    | X   | X   |     |
+| Malicious User Agent (Malware, RATs)  |     | X    | X   | X   |     |
 | Scheduled Task Creation               |     |      | X   | X   | X   |
 | Nbtscan Discovery (Scan & Output)     |     | X    | X   | (X) | X   |
 
