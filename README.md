@@ -81,7 +81,7 @@ The following table shows the different test cases and the expected detection re
 | DNS (Cache Injection)                 | (X) | X    |     | X   | X   |
 | Eventlog (WCE entries)                |     |      | X   | X   | X   |
 | Hosts File (AV/Win Update blocks)     | (X) |      | X   |     | X   |
-| Backdoor - StickyKey                  |     |      | X   |     | X   |
+| Backdoor (StickyKey file/debugger)    |     |      | X   |     | X   |
 | Obfuscation (RAR with JPG ext)        |     |      |     |     | (X) |
 | Web Shells (a good selection)         | X   |      | (X) |     | X   |
 | Ncat Alternative (Drop & Exec)        | X   |      | X   | X   | X   |
@@ -98,7 +98,7 @@ The following table shows the different test cases and the expected detection re
 | Scheduled Task Creation               |     |      | X   | X   | X   |
 | Nbtscan Discovery (Scan & Output)     |     | X    | X   | (X) | X   |
 
-# Actions
+# Test Cases
 
 ## 1. Dumps 
 
