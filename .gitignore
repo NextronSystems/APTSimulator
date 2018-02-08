@@ -2,3 +2,4 @@
 .vscode
 dist
 out.tmp
+build
