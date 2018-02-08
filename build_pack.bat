@@ -6,6 +6,8 @@ SET ZIP=.\helpers\7z.exe
 SET PASS=aptsimulator
 SET ARCHPASS=apt
 
+MKDIR %BUILD%
+
 :: Script
 copy APTSimulator.bat %BUILD%
 
