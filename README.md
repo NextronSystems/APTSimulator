@@ -55,13 +55,13 @@ If you script includes a tool, web shell, auxiliary or output file, place them i
 ### Extract a Tool 
 
 ```
-%ZIP% e -p%PASS% %TOOLARCH% -aoa -o%APTDIR% toolset\tool.exe > NUL
+"%ZIP%" e -p%PASS% %TOOLARCH% -aoa -o%APTDIR% toolset\tool.exe > NUL
 ```
 
 ### Extract a File
 
 ```
-%ZIP% e -p%PASS% %FILEARCH% -aoa -o%APTDIR% workfile\tool-output.txt > NUL
+"%ZIP%" e -p%PASS% %FILEARCH% -aoa -o%APTDIR% workfile\tool-output.txt > NUL
 ```
 
 # Detection 
