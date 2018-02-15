@@ -6,7 +6,8 @@ ECHO   APT Simulator
 ECHO   Florian Roth, v0.4.1 February 2018
 ECHO ===========================================================================
 
-SET CWD=%CD%
+SET CWD="%~dp0"
+cd %CWD%
 
 :: Config
 SET ZIP=%CWD%\helpers\7z.exe
