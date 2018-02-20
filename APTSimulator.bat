@@ -3,7 +3,7 @@ color 0C
 ECHO. 
 ECHO ===========================================================================
 ECHO   APT Simulator 
-ECHO   Florian Roth, v0.4.1 February 2018
+ECHO   Florian Roth, v0.4.2 February 2018
 ECHO ===========================================================================
 
 SET CWD="%~dp0"
@@ -48,12 +48,13 @@ IF /I "%AREYOUSURE%" NEQ "Y" GOTO END
 
 for %%i in (
     "collection"
-    "defense-evasion"
     "command-and-control"
+    "credential-access"
+    "defense-evasion"
     "discovery"
     "execution"
-    "persistence"
     "lateral-movement"
+    "persistence"
     "privilege-escalation"
 ) do (
     ECHO.
