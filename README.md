@@ -97,6 +97,7 @@ The following table shows the different test cases and the expected detection re
 | Malicious User Agent (Malware, RATs)  |     | X    | X   | X   |     |
 | Scheduled Task Creation               |     |      | X   | X   | X   |
 | Nbtscan Discovery (Scan & Output)     |     | X    | X   | (X) | X   |
+| Obfusc. JS (CACTUSTORCH) & Bind Shell | (X) | X    | X   | X   | X   |
 
 # Test Cases
 
@@ -192,6 +193,10 @@ The following table shows the different test cases and the expected detection re
 ## 21. Nbtscan Discovery
 
 - Scanning 3 private IP address class-C subnets and dumping the output to the working directory
+
+## 22. Obfuscated JS Dropper (CACTUSTORCH) and Bind Shell
+
+- Runs obfuscated JavaScript code with wscript.exe and starts decoded bind shell on port 1234/tcp
 
 # Warning
 
