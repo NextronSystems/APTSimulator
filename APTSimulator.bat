@@ -3,7 +3,7 @@ color 0C
 ECHO. 
 ECHO ===========================================================================
 ECHO   APT Simulator 
-ECHO   Florian Roth, v0.4.3 February 2018
+ECHO   Florian Roth, v0.4.4 February 2018
 ECHO ===========================================================================
 
 SET CWD="%~dp0"

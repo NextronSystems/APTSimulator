@@ -12,9 +12,11 @@ MKDIR %BUILD%
 copy APTSimulator.bat %BUILD%
 
 :: HELPERS
+del /Q %BUILD%\helpers\*.*
 xcopy /S /Y .\helpers %BUILD%\helpers\
 
 :: TEST SETS
+rd %BUILD%\test-sets\ /S /Q
 xcopy /S /Y .\test-sets %BUILD%\test-sets\
 
 :: TOOLS
