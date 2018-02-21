@@ -1,10 +1,6 @@
 @ECHO OFF
 color 0C
 ECHO. 
-ECHO ===========================================================================
-ECHO   APT Simulator 
-ECHO   Florian Roth, v0.4.4 February 2018
-ECHO ===========================================================================
 
 SET CWD="%~dp0"
 cd %CWD%
@@ -21,6 +17,9 @@ SET PASS=aptsimulator
 SET APTDIR=C:\TMP
 SET WWWROOT=C:\inetpub\wwwroot
 
+CLS
+ECHO ===========================================================================
+ECHO WARNING!                                               
 ECHO.
 ECHO This program is meant to simulate an APT on the local system by 
 ECHO distributing traces of typical APT attacks.
@@ -35,42 +34,64 @@ ECHO 4.) DO NOT upload contents of this archive to VIRUSTOTAL or a similar
 ECHO     online service as they provide backend views in which researchers and 
 ECHO     attackers get access to the uploaded files.
 ECHO.
-
 ECHO ===========================================================================
 ECHO Let's go ahead ... The next steps will manipulate the local system.
 ECHO.
 setlocal
 :PROMPT
-SET /P AREYOUSURE=Are you sure to proceed (Y/[N])?
+SET /P AREYOUSURE=Are you sure to proceed (Y/[N])? 
 IF /I "%AREYOUSURE%" NEQ "Y" GOTO END
 
-:: Run the test sets
+:MENU
+CLS
+color 07
+ECHO ===========================================================================
+TYPE welcome.txt                                                                        
+ECHO.
+ECHO   Select the test-set that you want to run:
+ECHO.
+ECHO   0 - RUN EVERY TEST
+ECHO   1 - Collection 
+ECHO   2 - Command and Control
+ECHO   3 - Credential Access 
+ECHO   4 - Defense Evasion
+ECHO   5 - Discovery
+ECHO   6 - Execution 
+ECHO   7 - Lateral Movement 
+ECHO   8 - Persistence
+ECHO   9 - Privilege Escalation
+ECHO   E - EXIT
+ECHO. 
 
-for %%i in (
-    "collection"
-    "command-and-control"
-    "credential-access"
-    "defense-evasion"
-    "discovery"
-    "execution"
-    "lateral-movement"
-    "persistence"
-    "privilege-escalation"
-) do (
+SET /P M=Your selection (then press ENTER): 
+IF %M%==0 SET list="collection" "command-and-control" "credential-access" "defense-evasion" "discovery" "execution" "lateral-movement" "persistence" "privilege-escalation"
+IF %M%==1 SET list="collection"
+IF %M%==2 SET list="command-and-control"
+IF %M%==3 SET list="credential-access"
+IF %M%==4 SET list="defense-evasion"
+IF %M%==5 SET list="discovery"
+IF %M%==6 SET list="execution"
+IF %M%==7 SET list="lateral-movement"
+IF %M%==8 SET list="persistence"
+IF %M%==9 SET list="privilege-escalation"
+IF %M%==e GOTO END
+IF %M%==E GOTO END
+
+:: Running all test sets
+for %%i in (%list%) do (
     ECHO.
     ECHO ###########################################################################
     ECHO RUNNING SET: %%i
     ECHO.
-    for /f "delims=" %%x in ('dir /b /a-d .\test-sets\%%i\*.bat') do call ".\test-sets\%%i\%%x" 
+    for /f "delims=" %%x in ('dir /b /a-d .\test-sets\%%i\*.bat') do call ".\test-sets\%%i\%%x"
 )
-GOTO END 
-
-:END
-ECHO.
 ECHO ===========================================================================
 ECHO Finished!
 ECHO Check for errors and make sure you opened the command line as 'Administrator'
+PAUSE
+GOTO MENU 
+
+:END
 ECHO.
-pause
 color 07
 endlocal
