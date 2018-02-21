@@ -76,127 +76,145 @@ The following table shows the different test cases and the expected detection re
 
 | Test Case                             | AV  | NIDS | EDR | SM  | CA  |
 |---------------------------------------|-----|------|-----|-----|-----|
-| Dumps (Pwdump, Dir Listing)           |     |      |     |     | X   |
-| Recon Activity (Typical Commands)     |     |      | X   | X   | X   |
-| DNS (Cache Injection)                 | (X) | X    |     | X   | X   |
-| Eventlog (WCE entries)                |     |      | X   | X   | X   |
-| Hosts File (AV/Win Update blocks)     | (X) |      | X   |     | X   |
-| Backdoor (StickyKey file/debugger)    |     |      | X   |     | X   |
-| Obfuscation (RAR with JPG ext)        |     |      |     |     | (X) |
-| Web Shells (a good selection)         | X   |      | (X) |     | X   |
-| Ncat Alternative (Drop & Exec)        | X   |      | X   | X   | X   |
-| Remote Execution Tool (Drop)          | (X) |      |     |     | X   |
-| Mimikatz (Drop & Exec)                | X   |      | X   | X   | X   |
-| PsExec (Drop & Exec)                  |     |      | X   | X   | X   |
-| At Job Creation                       |     |      | X   | X   | X   |
-| RUN Key Entry Creation                |     |      | X   | X   | X   |
-| System File in Susp Loc (Drop & Exec) |     |      | X   | X   | X   |
-| Guest User (Activation & Admin)       |     |      | X   | X   | X   |
+| Collect Local Files                   |     |      |     |     | X   |
+| C2 Connects                           | (X) | X    | X   | X   |     |
+| DNS Cache 1 (Cache Injection)         | (X) | X    |     | X   | X   |
+| Malicious User Agents (Malware, RATs) |     | X    | X   | X   |     |
+| Ncat Back Connect (Drop & Exec)       | X   |      | X   | X   | X   |
 | LSASS Dump (with Procdump)            |     |      | X   | X   | X   |
-| C2 Requests                           | (X) | X    | X   | X   |     |
-| Malicious User Agent (Malware, RATs)  |     | X    | X   | X   |     |
-| Scheduled Task Creation               |     |      | X   | X   | X   |
+| Mimikatz 1 (Drop & Exec)              | X   |      | X   | X   | X   |
+| WCE 1 (Eventlog entries)              |     |      | X   | X   | X   |
+| Active Guest Account Admin            |     |      | X   | X   | X   |
+| Fake System File (Drop & Exec)        |     |      | X   | X   | X   |
+| Hosts File (AV/Win Update blocks)     | (X) |      | X   |     | X   |
+| Obfuscated JS Dropper                 | (X) | X    | X   | X   | X   |
+| Obfuscation (RAR with JPG ext)        |     |      |     |     | (X) |
 | Nbtscan Discovery (Scan & Output)     |     | X    | X   | (X) | X   |
-| Obfusc. JS (CACTUSTORCH) & Bind Shell | (X) | X    | X   | X   | X   |
+| Recon Activity (Typical Commands)     |     |      | X   | X   | X   |
+| PsExec (Drop & Exec)                  |     |      | X   | X   | X   |
+| Remote Execution Tool (Drop)          | (X) |      |     |     | X   |
+| At Job                                |     |      | X   | X   | X   |
+| RUN Key Entry Creation                |     |      | X   | X   | X   |
+| Scheduled Task Creation               |     |      | X   | X   | X   |
+| StickyKey Backdoor                    |     |      | X   |     | X   |
+| Web Shells                            | X   |      | (X) |     | X   |
 
-# Test Cases
+# Test Sets
 
-## 1. Dumps 
+## Collection
+
+### Collect Local Files
 
 - drops pwdump output to the working dir
 - drops directory listing to the working dir
 
-## 2. Recon 
+## Command and Control
 
-- Executes command used by attackers to get information about a target system
+### C2 Connects
 
-## 3. DNS 
+- Uses Curl to access well-known C2 servers
+
+### DNS Cache 1
 
 - Looks up several well-known C2 addresses to cause DNS requests and get the addresses into the local DNS cache
 
-## 4. Eventlog
+### Malicious User Agents
 
-- Creates Windwows Eventlog entries that look as if WCE had been executed
+- Uses malicious user agents to access web sites
 
-## 5. Hosts
+### Ncat Back Connect
 
-- Adds entries to the local hosts file (update blocker, entries caused by malware)
+- Drops a PowerShell Ncat alternative to the working directory and runs it to back connect to a well-known attacker domain
 
-## 6. Sticky Key Backdoor
+## Credential Access
 
-- Tries to replace sethc.exe with cmd.exe (a backup file is created)
-- Tries to register cmd.exe as debugger for sethc.exe
+### LSASS DUMP
 
-## 7. Obfuscation
+- Dumps LSASS process memory to a suspicious folder
 
-- Drops a cloaked RAR file with JPG extension
-
-## 8. Web Shells
-
-- Creates a standard web root directory
-- Drops standard web shells to that diretory
-- Drops GIF obfuscated web shell to that diretory
-
-## 9. Ncat Alternative
-
-- Drops a PowerShell Ncat alternative to the working directory
-
-## 10. Remote Execution Tool
-
-- Drops a remote execution tool to the working directory
-
-## 11. Mimikatz 
+### Mimikatz-1
 
 - Dumps mimikatz output to working directory (fallback if other executions fail)
 - Run special version of mimikatz and dump output to working directory
 - Run Invoke-Mimikatz in memory (github download, reflection)
 
-## 12. PsExec 
+### WCE-1
 
-- Dump a renamed version of PsExec to the working directory
-- Run PsExec to start a command line in LOCAL_SYSTEM context
+- Creates Windwows Eventlog entries that look as if WCE had been executed
 
-## 13. At Job
+## Defense Evasion
 
-- Creates an at job that runs mimikatz and dumps credentials to file
-
-## 14. RUN Key
-
-- Create a suspicious new RUN key entry that dumps "net user" output to a file
-
-## 15. System File Suspicious Location
-
-- Drops suspicious executable with system file name (svchost.exe) in %PUBLIC% folder
-- Runs that suspicious program in %PUBLIC% folder
-
-## 16. Guest User
+### Active Guest Account Admin
 
 - Activates Guest user
 - Adds Guest user to the local administrators
 
-## 17. LSASS DUMP
+### Fake System File
 
-- Dumps LSASS process memory to a suspicious folder
+- Drops suspicious executable with system file name (svchost.exe) in %PUBLIC% folder
+- Runs that suspicious program in %PUBLIC% folder
 
-## 18. C2 Requests
+### Hosts
 
-- Uses Curl to access well-known C2 servers
+- Adds entries to the local hosts file (update blocker, entries caused by malware)
 
-## 19. Malicious User Agents
+### JS Dropper
 
-- Uses malicious user agents to access web sites
+- Runs obfuscated JavaScript code with wscript.exe and starts decoded bind shell on port 1234/tcp
 
-## 20. Scheduled Task Creation
+### Obfuscation
 
-- Creates a scheduled task that runs mimikatz and dumps the output to a file
+- Drops a cloaked RAR file with JPG extension
 
-## 21. Nbtscan Discovery
+## Discovery
+
+### Nbtscan Discovery
 
 - Scanning 3 private IP address class-C subnets and dumping the output to the working directory
 
-## 22. Obfuscated JS Dropper (CACTUSTORCH) and Bind Shell
+### Recon
 
-- Runs obfuscated JavaScript code with wscript.exe and starts decoded bind shell on port 1234/tcp
+- Executes command used by attackers to get information about a target system
+
+## Execution
+
+### PsExec 
+
+- Dump a renamed version of PsExec to the working directory
+- Run PsExec to start a command line in LOCAL_SYSTEM context
+
+### Remote Execution Tool
+
+- Drops a remote execution tool to the working directory
+
+## Lateral Movement
+
+No test cases yet
+
+## Persistence
+
+### At Job
+
+- Creates an at job that runs mimikatz and dumps credentials to file
+
+### RUN Key
+
+- Create a suspicious new RUN key entry that dumps "net user" output to a file
+
+### Scheduled Task Creation
+
+- Creates a scheduled task that runs mimikatz and dumps the output to a file
+
+### Sticky Key Backdoor
+
+- Tries to replace sethc.exe with cmd.exe (a backup file is created)
+- Tries to register cmd.exe as debugger for sethc.exe
+
+### Web Shells
+
+- Creates a standard web root directory
+- Drops standard web shells to that diretory
+- Drops GIF obfuscated web shell to that diretory
 
 # Warning
 
