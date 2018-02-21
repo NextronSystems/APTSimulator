@@ -201,9 +201,13 @@ No test cases yet
 
 - Create a suspicious new RUN key entry that dumps "net user" output to a file
 
-### Scheduled Task Creation
+### Scheduled Task
 
 - Creates a scheduled task that runs mimikatz and dumps the output to a file
+
+### Scheduled Task XML
+
+- Creates a scheduled task via XML file using Invoke-SchtasksBackdoor.ps1
 
 ### Sticky Key Backdoor
 
