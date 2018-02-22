@@ -81,6 +81,7 @@ The following table shows the different test cases and the expected detection re
 | DNS Cache 1 (Cache Injection)         | (X) | X    |     | X   | X   |
 | Malicious User Agents (Malware, RATs) |     | X    | X   | X   |     |
 | Ncat Back Connect (Drop & Exec)       | X   |      | X   | X   | X   |
+| WMI Backdoor C2                       |     |      | X   | X   | X   |
 | LSASS Dump (with Procdump)            |     |      | X   | X   | X   |
 | Mimikatz 1 (Drop & Exec)              | X   |      | X   | X   | X   |
 | WCE 1 (Eventlog entries)              |     |      | X   | X   | X   |
@@ -98,6 +99,7 @@ The following table shows the different test cases and the expected detection re
 | Scheduled Task Creation               |     |      | X   | X   | X   |
 | StickyKey Backdoor                    |     |      | X   |     | X   |
 | Web Shells                            | X   |      | (X) |     | X   |
+| WMI Backdoor                          |     |      | X   |     | X   |
 
 # Test Sets
 
@@ -125,6 +127,10 @@ The following table shows the different test cases and the expected detection re
 ### Ncat Back Connect
 
 - Drops a PowerShell Ncat alternative to the working directory and runs it to back connect to a well-known attacker domain
+
+### WMI Backdoor
+
+- Using Matt Graeber's [WMIBackdoor](https://github.com/mattifestation/WMI_Backdoor/) to kill local procexp64.exe when it starts
 
 ## Credential Access
 
@@ -219,6 +225,10 @@ No test cases yet
 - Creates a standard web root directory
 - Drops standard web shells to that diretory
 - Drops GIF obfuscated web shell to that diretory
+
+### WMI Backdoor
+
+- Using Matt Graeber's [WMIBackdoor](https://github.com/mattifestation/WMI_Backdoor/) to kill local procexp64.exe when it starts
 
 # Warning
 
