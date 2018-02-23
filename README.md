@@ -52,19 +52,19 @@ E.g. If you want to write a simple test case for "privilege escalation", that us
 
 If you script includes a tool, web shell, auxiliary or output file, place them in the folders `./toolset` or `./workfiles`. Running the build script `build_pack.bat` will include them in the encrypted archives `enc-toolset.7z` and `enc-files.7z`.
 
-### Extract a Tool 
+### Extract a Tool
 
-```
+```batch
 "%ZIP%" e -p%PASS% %TOOLARCH% -aoa -o%APTDIR% toolset\tool.exe > NUL
 ```
 
 ### Extract a File
 
-```
+```batch
 "%ZIP%" e -p%PASS% %FILEARCH% -aoa -o%APTDIR% workfile\tool-output.txt > NUL
 ```
 
-# Detection 
+# Detection
 
 The following table shows the different test cases and the expected detection results.
 
@@ -98,6 +98,7 @@ The following table shows the different test cases and the expected detection re
 | RUN Key Entry Creation                |     |      | X   | X   | X   |
 | Scheduled Task Creation               |     |      | X   | X   | X   |
 | StickyKey Backdoor                    |     |      | X   |     | X   |
+| UserInitMprLogonScript Persistence    |     |      | (X) | X   | X   |
 | Web Shells                            | X   |      | (X) |     | X   |
 | WMI Backdoor                          |     |      | X   |     | X   |
 
@@ -128,9 +129,9 @@ The following table shows the different test cases and the expected detection re
 
 - Drops a PowerShell Ncat alternative to the working directory and runs it to back connect to a well-known attacker domain
 
-### WMI Backdoor
+### WMI Backdoor C2
 
-- Using Matt Graeber's [WMIBackdoor](https://github.com/mattifestation/WMI_Backdoor/) to kill local procexp64.exe when it starts
+- Using Matt Graeber's WMIBackdoor to contact a C2 in certain intervals
 
 ## Credential Access
 
@@ -184,7 +185,7 @@ The following table shows the different test cases and the expected detection re
 
 ## Execution
 
-### PsExec 
+### PsExec
 
 - Dump a renamed version of PsExec to the working directory
 - Run PsExec to start a command line in LOCAL_SYSTEM context
@@ -225,6 +226,10 @@ No test cases yet
 - Creates a standard web root directory
 - Drops standard web shells to that diretory
 - Drops GIF obfuscated web shell to that diretory
+
+### UserInitMprLogonScript Persistence
+
+- Using the UserInitMprLogonScript key to get persistence
 
 ### WMI Backdoor
 
