@@ -11,7 +11,7 @@ APT Simulator is a Windows Batch script that uses a set of tools and output file
 
 # Motives
 
-Customers tested our scanners in a POC and sent us a complaint that our scanners didn't report on programs that they had installed on their test systems. They had installed an Nmap, dropped a PsExec.exe in the Downloads folder and placed on EICAR test virus on the user's Desktop. That was the moment when I decided to build a tool that simulates a real threat in a more appropriate way.  
+Customers tested [our scanners](https://www.nextron-systems.com/compare-our-scanners/) in a POC and sent us a complaint that our scanners didn't report on programs that they had installed on their test systems. They had installed an Nmap, dropped a PsExec.exe in the Downloads folder and placed on EICAR test virus on the user's Desktop. That was the moment when I decided to build a tool that simulates a real threat in a more appropriate way.  
 
 # Why Batch?
 
