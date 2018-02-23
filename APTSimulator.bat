@@ -1,4 +1,5 @@
 @ECHO OFF
+setlocal EnableDelayedExpansion
 color 0C
 ECHO. 
 
@@ -16,6 +17,9 @@ SET PASS=aptsimulator
 :: Target directories
 SET APTDIR=C:\TMP
 SET WWWROOT=C:\inetpub\wwwroot
+:: Sleep Interval
+SET SINTERVAL=OFF
+SET SECONDMAX=300
 
 CLS
 ECHO ===========================================================================
@@ -41,6 +45,37 @@ setlocal
 :PROMPT
 SET /P AREYOUSURE=Are you sure to proceed (Y/[N])? 
 IF /I "%AREYOUSURE%" NEQ "Y" GOTO END
+GOTO MENU
+
+:SETTINGS
+CLS
+ECHO ===========================================================================
+ECHO Settings
+ECHO.
+ECHO   [Sleep Interval] = "%SINTERVAL%"
+ECHO   [Maximum Seconds to Wait] = %SECONDMAX%
+ECHO.
+IF %SINTERVAL%==OFF ECHO   [A] Activate a random sleep interval between the test cases
+IF %SINTERVAL%==ON ECHO   [D] Deactivate a random sleep interval between the test cases
+ECHO   [S] Set the maximum seconds to wait between test cases (default=300)
+ECHO. 
+ECHO   [E] Exit to Menu
+ECHO. 
+SET /P M=Your selection (then press ENTER): 
+IF %M%==a SET SINTERVAL=ON
+IF %M%==A SET SINTERVAL=ON
+IF %M%==d SET SINTERVAL=OFF
+IF %M%==D SET SINTERVAL=OFF
+IF %M%==e GOTO MENU
+IF %M%==E GOTO MENU
+IF %M%==s GOTO SETMAXSECONDS
+IF %M%==S GOTO SETMAXSECONDS
+GOTO SETTINGS
+
+:SETMAXSECONDS
+SET /P M=Set the maximum seconds to wait: 
+SET SECONDMAX=%M%
+GOTO SETTINGS
 
 :MENU
 CLS
@@ -50,18 +85,20 @@ TYPE welcome.txt
 ECHO.
 ECHO   Select the test-set that you want to run:
 ECHO.
-ECHO   0 - RUN EVERY TEST
-ECHO   1 - Collection 
-ECHO   2 - Command and Control
-ECHO   3 - Credential Access 
-ECHO   4 - Defense Evasion
-ECHO   5 - Discovery
-ECHO   6 - Execution 
-ECHO   7 - Lateral Movement 
-ECHO   8 - Persistence
-ECHO   9 - Privilege Escalation
-ECHO   E - EXIT
-ECHO. 
+ECHO   [0] RUN EVERY TEST
+ECHO   [1] Collection 
+ECHO   [2] Command and Control
+ECHO   [3] Credential Access 
+ECHO   [4] Defense Evasion
+ECHO   [5] Discovery
+ECHO   [6] Execution
+ECHO   [7] Lateral Movement
+ECHO   [8] Persistence
+ECHO   [9] Privilege Escalation
+ECHO.
+ECHO   [S] Settings
+ECHO   [E] Exit
+ECHO.
 
 SET /P M=Your selection (then press ENTER): 
 IF %M%==0 SET list="collection" "command-and-control" "credential-access" "defense-evasion" "discovery" "execution" "lateral-movement" "persistence" "privilege-escalation"
@@ -74,6 +111,8 @@ IF %M%==6 SET list="execution"
 IF %M%==7 SET list="lateral-movement"
 IF %M%==8 SET list="persistence"
 IF %M%==9 SET list="privilege-escalation"
+IF %M%==s GOTO SETTINGS
+IF %M%==S GOTO SETTINGS
 IF %M%==e GOTO END
 IF %M%==E GOTO END
 
@@ -83,13 +122,25 @@ for %%i in (%list%) do (
     ECHO ###########################################################################
     ECHO RUNNING SET: %%i
     ECHO.
-    for /f "delims=" %%x in ('dir /b /a-d .\test-sets\%%i\*.bat') do call ".\test-sets\%%i\%%x"
+    for /f "delims=" %%x in ('dir /b /a-d .\test-sets\%%i\*.bat') do (
+        :: Random wait time
+        IF %SINTERVAL%==ON (
+            CALL:RAND %SECONDMAX%
+            ECHO Waiting !RANDNUM! seconds ...
+            ping 127.0.0.1 -n !RANDNUM! > nul
+        )
+        call ".\test-sets\%%i\%%x"
+    )
 )
 ECHO ===========================================================================
 ECHO Finished!
 ECHO Check for errors and make sure you opened the command line as 'Administrator'
 PAUSE
 GOTO MENU 
+
+:RAND
+SET /A RANDNUM=%RANDOM% %%(%1) +1
+GOTO:EOF
 
 :END
 ECHO.
