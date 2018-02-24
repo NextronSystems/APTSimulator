@@ -36,6 +36,10 @@ The focus of this tool is to simulate adversary activity, not malware. See the [
 
 The batch script extracts the tools and shells from an encrypted 7z archive at runtime. Do not download the master repo using the "download as ZIP" button. Instead use the official release from the [release](https://github.com/Neo23x0/APTSimulator/releases) section.
 
+## AV Excluder
+
+APT Simulator contains a module named "AVExcluder" that tries to register the used `%APTDIR%` as AV exclusion in typical AV solutions. As I do not have access to all of the AV software products in the market, please report errors or add new exclusions as pull requests.
+
 # Extending the Test Cases
 
 Since version 0.4 it is pretty easy to extend the test sets by adding a single `.bat` file to one of the test-set category folders.
