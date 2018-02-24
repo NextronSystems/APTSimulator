@@ -77,6 +77,11 @@ SET /P M=Set the maximum seconds to wait:
 SET SECONDMAX=%M%
 GOTO SETTINGS
 
+:AVEXCLUDER
+"%ZIP%" e -p%PASS% %TOOLARCH% -aoa -o"%TEMP%" toolset\avexcluder.bat > NUL
+call "%TEMP%\avexcluder.bat"
+GOTO MENU
+
 :MENU
 CLS
 color 07
@@ -96,6 +101,7 @@ ECHO   [7] Lateral Movement
 ECHO   [8] Persistence
 ECHO   [9] Privilege Escalation
 ECHO.
+ECHO   [A] Apply AV Exclusions in Registry
 ECHO   [S] Settings
 ECHO   [E] Exit
 ECHO.
@@ -113,6 +119,8 @@ IF %M%==8 SET list="persistence"
 IF %M%==9 SET list="privilege-escalation"
 IF %M%==s GOTO SETTINGS
 IF %M%==S GOTO SETTINGS
+IF %M%==a GOTO AVEXCLUDER
+IF %M%==A GOTO AVEXCLUDER
 IF %M%==e GOTO END
 IF %M%==E GOTO END
 
