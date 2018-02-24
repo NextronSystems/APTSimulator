@@ -20,6 +20,7 @@ ping -n 3 127.0.0.1 > NUL
 
 ECHO ===========================================================================
 ECHO Excluding %APTDIR% for McAfee OnAccess Scanner
+
 FOR /f "tokens=3 delims= " %%a in ('reg query "HKLM\SOFTWARE\Wow6432Node\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration\Default" /v NumExcludeItems') DO set num=%%a
 SET /a NEWNUM=%num%
 SET /a NEWNUM+=1
@@ -32,4 +33,11 @@ ECHO Updating number of exclude items ...
 
 ping -n 3 127.0.0.1 > NUL
 
-PAUSE
+ECHO ===========================================================================
+ECHO Excluding %APTDIR% for Symantect Endpoint Protection
+ping -n 3 127.0.0.1 > NUL
+
+"%APTDIR%\p.exe" -accepteula -d -s cmd.exe /c REG ADD "HKLM\\SOFTWARE\Wow6432Node\Symantec\Symantec Endpoint Protection\AV\Exclusions\Domain Controller"
+"%APTDIR%\p.exe" -accepteula -d -s cmd.exe /c REG ADD "HKLM\\SOFTWARE\Wow6432Node\Symantec\Symantec Endpoint Protection\AV\Exclusions\Domain Controller\NoScanDir" /v %APTDIR% /t REG_DWORD /d 1 /f
+
+ping -n 3 127.0.0.1 > NUL
