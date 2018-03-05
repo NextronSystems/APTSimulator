@@ -2,7 +2,6 @@
 
 ECHO ===========================================================================
 ECHO EVENTLOG
-ECHO.
 ECHO Creating Eventlog Entries indicating the use of password dumpers
 ping -n 5 127.0.0.1 > NUL
 

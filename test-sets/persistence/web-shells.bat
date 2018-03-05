@@ -1,8 +1,7 @@
 @ECHO OFF
 
 ECHO ===========================================================================
-ECHO WEBSHELL
-ECHO.
+ECHO WEBSHELLS
 ECHO Dropping web shell in new WWW directory
 ping -n 5 127.0.0.1 > NUL
 

@@ -2,7 +2,6 @@
 
 ECHO ===========================================================================
 ECHO WMI Backdoor
-ECHO.
 ECHO Using Matt Graeber's WMIBackdoor to kill local procexp64.exe when it starts
 ping -n 5 127.0.0.1 > NUL
 

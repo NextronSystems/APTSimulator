@@ -2,7 +2,6 @@
 
 ECHO ===========================================================================
 ECHO WORKING DIRS AND FILES
-ECHO.
 ECHO Creating typical attacker working directory %APTDIR% ...
 ping -n 5 127.0.0.1 > NUL
 MKDIR %APTDIR%

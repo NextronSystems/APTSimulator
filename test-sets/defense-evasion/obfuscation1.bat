@@ -2,7 +2,6 @@
 
 ECHO ===========================================================================
 ECHO OBFUSCATION
-ECHO.
 ECHO Dropping obfuscated RAR file with JPG extension
 ping -n 5 127.0.0.1 > NUL
 

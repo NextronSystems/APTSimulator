@@ -2,7 +2,6 @@
 
 ECHO ===========================================================================
 ECHO Schtasks Creation
-ECHO.
 ECHO Registering mimikatz in scheduled task
 ping -n 5 127.0.0.1 > NUL
 

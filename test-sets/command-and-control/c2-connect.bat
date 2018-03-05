@@ -2,7 +2,6 @@
 
 ECHO ===========================================================================
 ECHO C2 Access
-ECHO.
 ECHO Using curl to access well-known C2 addresses
 
 ECHO C2: msupdater.com

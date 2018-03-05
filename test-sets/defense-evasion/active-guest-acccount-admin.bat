@@ -2,7 +2,6 @@
 
 ECHO ===========================================================================
 ECHO GUEST USER
-ECHO.
 ECHO Activating guest user account
 ping -n 3 127.0.0.1 > NUL
 

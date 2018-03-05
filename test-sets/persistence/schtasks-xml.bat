@@ -2,7 +2,6 @@
 
 ECHO ===========================================================================
 ECHO Scheduled Task XML
-ECHO.
 ECHO Creates a scheduled task via XML file using Invoke-SchtasksBackdoor.ps1
 ping -n 5 127.0.0.1 > NUL
 

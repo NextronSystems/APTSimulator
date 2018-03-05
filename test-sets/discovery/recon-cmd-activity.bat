@@ -2,7 +2,6 @@
 
 ECHO ===========================================================================
 ECHO RECON ACTIVITY
-ECHO.
 ECHO Executes commands that are often used by attackers to get information
 ping -n 5 127.0.0.1 > NUL
 

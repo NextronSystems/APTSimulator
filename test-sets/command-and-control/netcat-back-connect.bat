@@ -2,7 +2,6 @@
 
 ECHO ===========================================================================
 ECHO NETCAT ALTERNATIVE
-ECHO.
 ECHO Dropping a Powershell netcat alternative into the APT dir
 ping -n 5 127.0.0.1 > NUL
 

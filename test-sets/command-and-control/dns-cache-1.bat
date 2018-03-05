@@ -2,7 +2,6 @@
 
 ECHO ===========================================================================
 ECHO DNS CACHE
-ECHO.
 ECHO Creating DNS Cache entries for well-known malicious C2 servers
 ping -n 5 127.0.0.1 > NUL
 

@@ -2,7 +2,6 @@
 
 ECHO ===========================================================================
 ECHO UserInitMprLogonScript Persistence
-ECHO.
 ECHO Using the UserInitMprLogonScript key to get persistence
 ping -n 5 127.0.0.1 > NUL
 

@@ -2,7 +2,6 @@
 
 ECHO ===========================================================================
 ECHO NETBIOS Discovery
-ECHO.
 ECHO Executes nbtscan on the local network
 ping -n 5 127.0.0.1 > NUL
 

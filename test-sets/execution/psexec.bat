@@ -2,7 +2,6 @@
 
 ECHO ===========================================================================
 ECHO PSEXEC
-ECHO.
 ECHO Dropping a modified PsExec into the APT dir
 ping -n 5 127.0.0.1 > NUL
 

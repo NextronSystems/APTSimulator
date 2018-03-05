@@ -2,7 +2,6 @@
 
 ECHO ===========================================================================
 ECHO LSASS DUMP
-ECHO.
 ECHO Dumping LSASS memory with ProcDump
 ping -n 5 127.0.0.1 > NUL
 

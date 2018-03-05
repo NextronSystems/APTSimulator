@@ -2,7 +2,6 @@
 
 ECHO ===========================================================================
 ECHO CACTUSTORCH
-ECHO.
 ECHO Using certutil to drop a CactusTorch shellcode lanucher injecting bind shell (port 1234/tcp) into rundll32.exe
 ping -n 5 127.0.0.1 > NUL
 

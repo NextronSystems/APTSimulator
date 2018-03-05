@@ -1,9 +1,8 @@
 @ECHO OFF
 
 ECHO ===========================================================================
-ECHO Suspicious Locations
+ECHO SUSPICIOUS LOCATIONS
 ECHO Well-known system files in suspicious locations
-ECHO.
 ECHO Placing a svchost.exe (which is actually srvany.exe) into %PUBLIC%
 ping -n 5 127.0.0.1 > NUL
 

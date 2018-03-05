@@ -2,7 +2,6 @@
 
 ECHO ===========================================================================
 ECHO MIMIKATZ
-ECHO.
 ECHO Dropping a custom mimikatz build into the APT dir
 ping -n 5 127.0.0.1 > NUL
 

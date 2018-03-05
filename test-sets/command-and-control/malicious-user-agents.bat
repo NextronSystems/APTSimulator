@@ -2,7 +2,6 @@
 
 ECHO ===========================================================================
 ECHO MALICIOUS UA
-ECHO.
 ECHO Using malicious user agents to access web sites
 
 ECHO HttpBrowser RAT

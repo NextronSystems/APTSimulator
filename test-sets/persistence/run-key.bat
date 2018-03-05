@@ -2,7 +2,6 @@
 
 ECHO ===========================================================================
 ECHO Backdoor Run Key
-ECHO.
 ECHO Registering a malicious RUN key
 ping -n 5 127.0.0.1 > NUL
 

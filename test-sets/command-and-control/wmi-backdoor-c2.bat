@@ -2,7 +2,6 @@
 
 ECHO ===========================================================================
 ECHO WMI Backdoor C2
-ECHO.
 ECHO Using Matt Graeber's WMIBackdoor to contact a C2 in certain intervals
 ping -n 5 127.0.0.1 > NUL
 
