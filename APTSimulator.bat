@@ -42,6 +42,12 @@ ECHO ===========================================================================
 ECHO Let's go ahead ... The next steps will manipulate the local system.
 ECHO.
 setlocal
+
+if [%1]==[-b] (
+SET list="collection" "command-and-control" "credential-access" "defense-evasion" "discovery" "execution" "lateral-movement" "persistence" "privilege-escalation"
+goto :batchmode
+)
+
 :PROMPT
 SET /P AREYOUSURE=Are you sure to proceed (Y/[N])? 
 IF /I "%AREYOUSURE%" NEQ "Y" GOTO END
@@ -124,6 +130,7 @@ IF %M%==A GOTO AVEXCLUDER
 IF %M%==e GOTO END
 IF %M%==E GOTO END
 
+:batchmode
 :: Running all test sets
 for %%i in (%list%) do (
     ECHO.
@@ -143,12 +150,15 @@ for %%i in (%list%) do (
 ECHO ===========================================================================
 ECHO Finished!
 ECHO Check for errors and make sure you opened the command line as 'Administrator'
+
+if NOT [%1]==[-b] (
 PAUSE
 GOTO MENU 
 
 :RAND
 SET /A RANDNUM=%RANDOM% %%(%1) +1
 GOTO:EOF
+)
 
 :END
 ECHO.
