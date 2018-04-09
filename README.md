@@ -239,6 +239,14 @@ No test cases yet
 
 - Using Matt Graeber's [WMIBackdoor](https://github.com/mattifestation/WMI_Backdoor/) to kill local procexp64.exe when it starts
 
+# Batch Mode
+
+Since version 0.8.0 APTSimulator features a batch mode provided by @juju4 that allows to run it in in a scripted way e.g. via [Ansible](https://github.com/juju4/ansible-win-aptsimulator) 
+
+```
+APTSimulator.bat -b
+```
+
 # Warning
 
 This repo contains tools and executables that can harm your system's integrity and stability. Do only use them on non-productive test or demo systems.
