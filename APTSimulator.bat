@@ -3,7 +3,7 @@ setlocal EnableDelayedExpansion
 color 0C
 ECHO. 
 
-SET CWD="%~dp0"
+SET CWD=%~dp0
 cd %CWD%
 
 :: Config
