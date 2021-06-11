@@ -78,6 +78,11 @@ IF %M%==s GOTO SETMAXSECONDS
 IF %M%==S GOTO SETMAXSECONDS
 GOTO SETTINGS
 
+:COBALTSTRIKE 
+call ".\test-sets\cobaltstrike\cobaltstrike-simulation.bat"
+PAUSE 
+GOTO MENU
+
 :SETMAXSECONDS
 SET /P M=Set the maximum seconds to wait: 
 SET SECONDMAX=%M%
@@ -107,6 +112,8 @@ ECHO   [7] Lateral Movement
 ECHO   [8] Persistence
 ECHO   [9] Privilege Escalation
 ECHO.
+ECHO   [C] CobaltStrike Beacon Simulation
+ECHO.
 ECHO   [A] Apply AV Exclusions in Registry
 ECHO   [S] Settings
 ECHO   [E] Exit
@@ -123,6 +130,8 @@ IF %M%==6 SET list="execution"
 IF %M%==7 SET list="lateral-movement"
 IF %M%==8 SET list="persistence"
 IF %M%==9 SET list="privilege-escalation"
+IF %M%==C GOTO COBALTSTRIKE
+IF %M%==c GOTO COBALTSTRIKE
 IF %M%==s GOTO SETTINGS
 IF %M%==S GOTO SETTINGS
 IF %M%==a GOTO AVEXCLUDER

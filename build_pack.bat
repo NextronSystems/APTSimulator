@@ -6,7 +6,10 @@ SET ZIP=.\helpers\7z.exe
 SET PASS=aptsimulator
 SET ARCHPASS=apt
 
+:: Preperations
 MKDIR %BUILD%
+:: Remove old package
+del /q ./dist/APTSimulator_pw_apt.zip
 
 :: Script
 copy APTSimulator.bat %BUILD%
