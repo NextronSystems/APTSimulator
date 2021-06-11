@@ -6,8 +6,6 @@ ping -n 3 127.0.0.1 > NUL
 
 "%ZIP%" e -p%PASS% "%TOOLARCH%" -aoa -o"%APTDIR%" toolset\CreateNamedPipe.exe > NUL
 
-GOTO BEACONING
-
 ECHO.
 ECHO --- Create some default Named Pipes ...
 ping -n 2 127.0.0.1 > NUL
