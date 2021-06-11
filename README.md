@@ -1,5 +1,7 @@
 # APT Simulator
 
+Important: Don't just ZIP download or clone the repo if you don't plan to develop some test. Use the package in the [release](https://github.com/Neo23x0/APTSimulator/releases) wich contains a packaged version with encrypted archives that don't contain cleartext samples and tools. 
+
 APT Simulator is a Windows Batch script that uses a set of tools and output files to make a system look as if it was compromised. In contrast to other adversary simulation tools, APT Simulator is deisgned to make the application as simple as possible. You don't need to run a web server, database or any agents on set of virtual machines. Just download the prepared archive, extract and run the contained Batch file as Administrator. Running APT Simulator takes less than a minute of your time.
 
 # Use Cases
