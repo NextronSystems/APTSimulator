@@ -56,7 +56,7 @@ E.g. If you want to write a simple test case for "privilege escalation", that us
 
 ### Tool and File Extraction
 
-If you script includes a tool, web shell, auxiliary or output file, place them in the folders `./toolset` or `./workfiles`. Running the build script `build_pack.bat` will include them in the encrypted archives `enc-toolset.7z` and `enc-files.7z`.
+If your script includes a tool, web shell, auxiliary or output file, place them in the folders `./toolset` or `./workfiles`. Running the build script `build_pack.bat` will include them in the encrypted archives `enc-toolset.7z` and `enc-files.7z`.
 
 #### Extract a Tool
 
@@ -110,7 +110,7 @@ The following table shows the different test cases and the expected detection re
 
 ## Cobalt Strike Beacon Activity
 
-You should see be able to find events in your security monitoring solution (SIEM, EDR etc.) for the following keywords:
+You should now be able to find events in your security monitoring solution (SIEM, EDR etc.) for the following keywords:
 
 ### Named Pipes
 
