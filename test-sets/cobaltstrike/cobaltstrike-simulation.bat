@@ -43,7 +43,7 @@ ECHO Copy a service binary file to a suspicious location ...
 ECHO Using Post-CobaltStrike 4.2 scheme
 copy "%APTDIR%\CreateNamedPipe.exe" \\%COMPUTERNAME%\ADMIN$\b6a1458f396.exe
 ECHO Starting suspicious service
-sc create tbbd05 binpath= "%%COMSPEC%% echo /c b6a1458f396 > \\.\pipe\334485" DisplayName= "tbbd05" start= demand
+sc create tbbd05 binpath= "%%COMSPEC%% /c echo b6a1458f396 > \\.\pipe\334485" DisplayName= "tbbd05" start= demand
 sc start tbbd05 
 sc stop tbbd05 
 sc delete tbbd05 
