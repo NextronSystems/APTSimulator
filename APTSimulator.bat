@@ -31,10 +31,11 @@ ECHO.
 ECHO 1.) To get the best results, run it as "Administrator"
 ECHO 2.) DO NOT run this script on PRODUCTIVE systems as it drops files
 ECHO     that may be used by attackers for lateral movement, password dumping
-ECHO     and other types of manipulations. 
-ECHO 3.) You DO NOT have to deactivate your ANTIVIRUS. Keep it running to see 
+ECHO     and other types of manipulations.
+ECHO 3.) Create a snapshot of the VM. There is no cleanup routine available.
+ECHO 4.) You DO NOT have to deactivate your ANTIVIRUS. Keep it running to see 
 ECHO     that it is useless to detect activities of skilled attackers.
-ECHO 4.) DO NOT upload contents of this archive to VIRUSTOTAL or a similar 
+ECHO 5.) DO NOT upload contents of this archive to VIRUSTOTAL or a similar 
 ECHO     online service as they provide backend views in which researchers and 
 ECHO     attackers get access to the uploaded files.
 ECHO.

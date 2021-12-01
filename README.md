@@ -274,9 +274,9 @@ Since version 0.8.0 APTSimulator features a batch mode provided by @juju4 that a
 APTSimulator.bat -b
 ```
 
-## Warning
+## WARNING
 
-This repo contains tools and executables that can harm your system's integrity and stability. Do only use them on non-productive test or demo systems.
+This repo contains tools and executables that can harm your system's integrity and stability. Do only use them on non-productive test or demo systems. Create a snapshot before you start. Otherwise you have to remove all the modifications manually, which is a tedious task.
 
 ## Screenshots
 
