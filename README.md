@@ -1,8 +1,8 @@
 # APT Simulator
 
-Important: Don't just ZIP download or clone the repo if you don't plan to develop some test. Use the package in the [release](https://github.com/Neo23x0/APTSimulator/releases) wich contains a packaged version with encrypted archives that don't contain cleartext samples and tools. 
+Important: Don't just ZIP download or clone the repo if you don't plan to develop some test. Use the package in the [release](https://github.com/Neo23x0/APTSimulator/releases) which contains a packaged version with encrypted archives that don't contain cleartext samples and tools. 
 
-APT Simulator is a Windows Batch script that uses a set of tools and output files to make a system look as if it was compromised. In contrast to other adversary simulation tools, APT Simulator is deisgned to make the application as simple as possible. You don't need to run a web server, database or any agents on set of virtual machines. Just download the prepared archive, extract and run the contained Batch file as Administrator. Running APT Simulator takes less than a minute of your time.
+APT Simulator is a Windows Batch script that uses a set of tools and output files to make a system look as if it was compromised. In contrast to other adversary simulation tools, APT Simulator is designed to make the application as simple as possible. You don't need to run a web server, database or any agents on set of virtual machines. Just download the prepared archive, extract and run the contained Batch file as Administrator. Running APT Simulator takes less than a minute of your time.
 
 ## Use Cases
 
@@ -178,7 +178,7 @@ Note: No events? you can use [this](https://github.com/SigmaHQ/sigma/blob/master
 
 #### WCE-1
 
-- Creates Windwows Eventlog entries that look as if WCE had been executed
+- Creates Windows Eventlog entries that look as if WCE had been executed
 
 ### Defense Evasion
 
@@ -255,8 +255,8 @@ No test cases yet
 #### Web Shells
 
 - Creates a standard web root directory
-- Drops standard web shells to that diretory
-- Drops GIF obfuscated web shell to that diretory
+- Drops standard web shells to that directory
+- Drops GIF obfuscated web shell to that directory
 
 #### UserInitMprLogonScript Persistence
 

