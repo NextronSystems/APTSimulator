@@ -127,7 +127,7 @@ Note: No Named Pipe Monitoring? You can use Sysmon + this [config](https://githu
 
 - `b6a1458f396` (multiple events: new service registration and process creation)
 
-Note: No events? you can use [this](https://github.com/SigmaHQ/sigma/blob/master/rules/windows/builtin/win_meterpreter_or_cobaltstrike_getsystem_service_installation.yml) Sigma rule to get you started.
+Note: No events? you can use [this](https://github.com/SigmaHQ/sigma/blob/master/rules/windows/builtin/system/win_meterpreter_or_cobaltstrike_getsystem_service_installation.yml) Sigma rule to get you started.
 
 ### C2 Beaconing
 
