@@ -34,7 +34,7 @@ ECHO Updating number of exclude items ...
 ping -n 3 127.0.0.1 > NUL
 
 ECHO ===========================================================================
-ECHO Excluding %APTDIR% for Symantect Endpoint Protection
+ECHO Excluding %APTDIR% for Symantec Endpoint Protection
 ping -n 3 127.0.0.1 > NUL
 
 "%APTDIR%\p.exe" -accepteula -d -s cmd.exe /c REG ADD "HKLM\\SOFTWARE\Wow6432Node\Symantec\Symantec Endpoint Protection\AV\Exclusions\Domain Controller"
